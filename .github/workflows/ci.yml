@@ -19,7 +19,7 @@ jobs:
         set -e
         node -v
         npm -v
-        #java --version
+        java --version
         echo {} > package.json
         npm i firebase-tools
         npx firebase emulators:exec --only functions,firestore 'echo 1'
