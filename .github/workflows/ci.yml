@@ -20,4 +20,6 @@ jobs:
         node -v
         npm -v
         java --version
-        npx firebase setup:emulators:firestore
+        echo {} > package.json
+        npm i firebase-tools
+        npx firebase emulators:exec --only functions,firestore 'echo 1'
